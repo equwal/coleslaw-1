@@ -78,7 +78,6 @@ span.paren6:hover { color : inherit; background-color : #FFBAFF; }
     }
 
     .article-meta, .article-content, .article-meta-meta{
-        /*        margin-left: 10em; */
         margin-right: 0em;
         padding-left: 5%;
     }
@@ -118,7 +117,7 @@ span.paren6:hover { color : inherit; background-color : #FFBAFF; }
 img {
     max-width: 100%;
     height: auto;
-    vertical-align: middle;
+    /*    vertical-align: middle; */
 }
 a { text-decoration: none; outline: none;}
 a.anchor { color: black }
@@ -306,9 +305,8 @@ h, h1, h2, h3, h4, h5, h6 {
     display: block;
     margin-top: 0.1em;
 }
-.artcile-meta-meta h1 {
-    padding-left: 5%;
-    text-algin: left;
+.article-meta-meta h1 {
+    text-align: left;
 }
 .article-title h1 {
     font-size: 2em;
