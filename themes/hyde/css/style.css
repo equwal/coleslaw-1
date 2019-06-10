@@ -12,8 +12,6 @@
 .date { font-style: italic;  clear: both; color: black; padding-left: 0.75em} /* except index */
 .article-meta {
     margin-left: 0;
-    padding-top: 0.75em;
-    margin-top: 0.75em;
     padding-bottom: 0.75em;
     margin-bottom: 0.75em;
 }
@@ -307,6 +305,10 @@ h, h1, h2, h3, h4, h5, h6 {
     height: 2em;
     display: block;
     margin-top: 0.1em;
+}
+.artcile-meta-meta h1 {
+    padding-left: 5%;
+    text-algin: left;
 }
 .article-title h1 {
     font-size: 2em;
