@@ -1,5 +1,25 @@
 (in-package :coleslaw)
 
+(eval-when (:compile-toplevel :load-toplevel :execute)
+  (defun group (source n)
+    "From Paul Graham's 'On Lisp' utilities."
+    (labels ((rec (source acc)
+               (let ((rest (nthcdr n source)))
+                 (if (consp rest)
+                     (rec rest (cons
+                                (subseq source 0 n)
+                                acc))
+                     (nreverse
+                      (cons source acc))))))
+      (if source (rec source nil) nil))))
+
+(defmacro defcollect (name collector argn)
+  "Collect a bunch of args into multiple invocations of a funcion. One example
+of this is setf/setq: (setf a b c d) -> (setf a b) (setf c d)"
+  (alexandria:with-gensyms (x args)
+    `(defmacro ,name (&rest ,args)
+       `(progn ,@(loop for ,x in (group ,args ,argn)
+                       collect (cons ',collector ,x))))))
 
 (define-condition coleslaw-condition ()
   ())
@@ -29,7 +49,7 @@
   "Return a list of all the subclasses of CLASS."
   (let ((subclasses (closer-mop:class-direct-subclasses class)))
     (append subclasses (loop for subclass in subclasses
-                          nconc (all-subclasses subclass)))))
+                             nconc (all-subclasses subclass)))))
 
 (defmacro do-subclasses ((var class) &body body)
   "Iterate over the subclasses of CLASS performing BODY with VAR
@@ -109,10 +129,10 @@ use (fmt program args) as the value of PROGRAM."
 along with any missing parent directories otherwise."
   (ensure-directories-exist path)
   (with-open-file (out path
-                   :direction :output
-                   :if-exists :supersede
-                   :if-does-not-exist :create
-                   :external-format :utf-8)
+                       :direction :output
+                       :if-exists :supersede
+                       :if-does-not-exist :create
+                       :external-format :utf-8)
     (write text :stream out :escape nil)))
 
 (defun get-updated-files (&optional (revision *last-revision*))

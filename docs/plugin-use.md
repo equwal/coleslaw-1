@@ -179,7 +179,7 @@ CL-USER> (chirp:complete-authentication "4173325")
 **Description**: Add Summary Card metadata to blog posts
   to enhance twitter links to that content.
 
-**Example**: `(twitter-summary-card :twitter-handle "@redline6561")
+**Example**: `(twitter-summary-card :twitter-handle "@redline6561**)
 
 ## Versioning Deploys
 

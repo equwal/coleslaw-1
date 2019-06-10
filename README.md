@@ -1,3 +1,6 @@
+[If you are here for coleslaw-mode, click here.](https://github.com/equwal/coleslaw-mode)
+==============
+Note: not the base project. Personal edits for http://truex.eu.
 # coleslaw
 
 [![Build Status](https://travis-ci.org/kingcons/coleslaw.svg?branch=master)](https://travis-ci.org/kingcons/coleslaw)
@@ -79,9 +82,6 @@ Otherwise, run the commands on your local machine.
      ```
 4. Optionally, point the web server of your liking at your config-specified
    `:deploy-dir`. Or "deploy-dir/.curr" if the `versioned` plugin is enabled.
-5. If you use Emacs, consider installing
-   [coleslaw-mode](https://github.com/equwal/coleslaw-mode) to author your
-   posts.
 
 Now just write posts, git commit and build by hand or by push.
 
