@@ -156,12 +156,10 @@ in the git repo since REVISION."
         programs))
 
 (defun run-rsync (fmt-args &rest args)
-  (run-program "rsync ~a ~a"
-               (if (and (rsync-passfile *config*)
-                        (which-sshpass *config*))
-                   "--rsh=\"/usr/bin/sshpass -f /home/jose/.backup-pass ssh -o StrictHostKeyChecking=no\""
-                   "")
-               (apply #'format nil fmt-args args)))
+  (let ((ops (rsync-options *config*)))
+    (run-program "rsync ~a ~a"
+                 (if ops ops "")
+                 (apply #'format nil fmt-args args))))
 
 (defun path-move (from to)
   "Move things, or copy with rsync."
