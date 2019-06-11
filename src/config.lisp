@@ -28,7 +28,7 @@
    :conf-sitemap nil
    :plugins      nil
    :sitenav      nil
-   :rsync-options nil
+   :rsync-options "--delete -avz"
    :excerpt-sep  "<!--more-->"
    :name-fn      'identity
    :charset      "UTF-8"
