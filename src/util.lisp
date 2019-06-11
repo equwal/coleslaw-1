@@ -157,7 +157,7 @@ in the git repo since REVISION."
 
 (defun ensure-remote-directories-exist (rsync-path)
   "Not implemented."
-  rsync-pass)
+  rsync-path)
 (defun run-rsync (from to)
   "Execute an rsync command, keeping with rsync options config."
   (run-program "rsync ~a ~a ~a"
