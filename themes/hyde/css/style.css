@@ -142,7 +142,6 @@ a.anchor { color: black }
     border-width: 0 0 0.15em 0;
     border-style: double;
     border-color: black;
-    display: inline-table;
 }
 .navlink, .press {
     border-width: 0.25em;
@@ -156,6 +155,9 @@ a.anchor { color: black }
     color: black;
     text-align: center;
     display: inline;
+}
+.navlink {
+    display: inline-table;
 }
 .press {
     margin: 0;
