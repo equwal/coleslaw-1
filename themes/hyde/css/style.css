@@ -134,7 +134,7 @@ a.anchor { color: black }
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #98fb98;
+    background-color: #E5e5e5;
     text-align: center;
     border-width: 0 0 0.15em 0;
     border-style: double;
@@ -144,7 +144,7 @@ a.anchor { color: black }
     border-width: 0.25em;
     border-style: outset;
     width: auto;
-    background-color: #98fb98;
+    background-color: #E5e5e5;
     height: auto;
     margin: 0;
     padding: 0.25em;
@@ -172,7 +172,7 @@ a.anchor { color: black }
     padding: 1em;
 }
 .innerbg {
-    background: #98fb98;
+    background: #E5e5e5;
     padding: 0px;
     margin: 0px;
 }
