@@ -154,7 +154,9 @@ a.anchor { color: black }
     margin-left: 0.75em;
     color: black;
     text-align: center;
-    display: inline;
+}
+.navlink {
+    display: inline-table;
 }
 .navlink {
     display: inline-table;
@@ -164,6 +166,7 @@ a.anchor { color: black }
     margin-top: 0.75em;
     margin-bottom: 0.75em;
     margin-right: 0.75em;
+    display: inline;
 }
 .inline {
     display: inline;
