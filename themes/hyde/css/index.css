@@ -3,10 +3,11 @@ body {
 }
 .navigation {
     font-size: 1.2em;
-    width: 4em;
-    height: auto;
-    margin: 2em;
-    margin-right: 4em;
+    width: 96%;
+    margin: 0;
+    height: 20%;
+    padding-left: 2%;
+    padding-right: 2%;
     /*    float: top left; */
     clear: left;
     float: left;
@@ -14,22 +15,29 @@ body {
     background-color: #E5e5e5;
     border-width: 0;
 }
+.article {
+    
+}
 .navlink {
     border-width: 0.25em;
     border-style: outset;
-    width: 4em;
-    height: auto;
-    margin-left: 0.75em;
-    margin-right: 0.75em;
+    max-height: 10%;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
     margin-bottom: 0.25em;
     margin-top: 0.25em;
     color: black;
     text-align: center;
     clear: left;
+    max-width: 9%;
+    display: inline-table
 }
 .navlink img {
     margin: 0;
     display: inline;
+}
+.navlink a {
+    width: 9%;
 }
 .date{clear:none}
 

@@ -11,14 +11,17 @@
 .tags {padding-left: 0.75em; padding-bottom: 0.75em;}
 .date { font-style: italic;  clear: both; color: black; padding-left: 0.75em} /* except index */
 .article-meta {
-    margin-left: 0;
     padding-bottom: 0.75em;
     margin-bottom: 0.75em;
+    max-width: 32em;
+    padding-left: 2em;
+    padding-right: 2em;
+    
 }
 .archive-title { font-size: 1em }
 html {
     background: #0000ff;
-    margin: 0.75em;
+    margin: 2%;
     color: black;
 }
 
@@ -139,6 +142,7 @@ a.anchor { color: black }
     border-width: 0 0 0.15em 0;
     border-style: double;
     border-color: black;
+    display: inline-table;
 }
 .navlink, .press {
     border-width: 0.25em;
@@ -151,7 +155,7 @@ a.anchor { color: black }
     margin-left: 0.75em;
     color: black;
     text-align: center;
-    display: inline-block;
+    display: inline;
 }
 .press {
     margin: 0;
@@ -265,11 +269,8 @@ h, h1, h2, h3, h4, h5, h6 {
 .tabbed ul {
     margin-left: 1em;
 }
-.article-box {
-    margin-left: 8em;
-}
 .article-box .article-image, .article-box .article-title, .article-box .article{
-    display: inline-block;
+    display: inline;
     padding-right: 1em;
     width: 70%;
 }
