@@ -3,20 +3,11 @@ body {
 }
 .navigation {
     font-size: 1.2em;
-    width: 96%;
-    margin: 0;
     height: 20%;
-    padding-left: 2%;
-    padding-right: 2%;
-    /*    float: top left; */
-    clear: left;
-    float: left;
-    position: relative;
     background-color: #E5e5e5;
-    border-width: 0;
 }
-.article {
-    
+.article-image img {
+    max-width: 50%;
 }
 .navlink {
     border-width: 0.25em;
@@ -35,6 +26,10 @@ body {
 .navlink img {
     margin: 0;
     display: inline;
+    width: 12em;
+}
+.navlink {
+    vertical-align: top;
 }
 .navlink a {
     width: 9%;

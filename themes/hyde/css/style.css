@@ -30,7 +30,6 @@ html {
 .tag-high { font-size: 1.8em; font-weight: 800 }
 body {
     font-family: Vollkorn;
-    padding-top: 5em;
     font-size: 1.2em;
 }
 .relative-nav {padding: 0.75em;}
@@ -133,15 +132,9 @@ a.anchor { color: black }
     height: auto;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
-    /*    float: top left; */
-    position: fixed;
-    top: 0;
-    left: 0;
     background-color: #E5e5e5;
     text-align: center;
-    border-width: 0 0 0.15em 0;
-    border-style: double;
-    border-color: black;
+    margin-bottom: 2%;
 }
 .navlink, .press {
     border-width: 0.25em;
@@ -157,13 +150,15 @@ a.anchor { color: black }
 }
 .navlink {
     display: inline-table;
+    vertical-align: bottom;
+    margin: 0.25em;
 }
 .press {
     margin: 0;
     margin-top: 0.75em;
     margin-bottom: 0.75em;
     margin-right: 0.75em;
-    display: inline;
+    display: inline-block;
 }
 .inline {
     display: inline;
