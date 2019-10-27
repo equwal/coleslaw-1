@@ -8,6 +8,6 @@
   :defsystem-depends-on (:prove-asdf)
   :components ((:module "tests"
                 :components
-                        ((:test-file "tests"))))
+                ((:test-file "tests"))))
   :perform (test-op :after (op c)
                     (uiop:symbol-call :prove 'run c)))

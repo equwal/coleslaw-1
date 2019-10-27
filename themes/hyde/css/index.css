@@ -1,15 +1,15 @@
 body {
     padding-top: 0;
 }
-.navigation {
+/* .navigation {
     font-size: 1.2em;
     height: 20%;
     background-color: #E5e5e5;
-}
+}*/
 .article-image img {
     max-width: 50%;
 }
-.navlink {
+/* .navlink {
     border-width: 0.25em;
     border-style: outset;
     max-height: 10%;
@@ -28,12 +28,9 @@ body {
     display: inline;
     width: 12em;
 }
-.navlink {
-    vertical-align: top;
-}
 .navlink a {
     width: 9%;
-}
+}*/
 .date{clear:none}
 
 

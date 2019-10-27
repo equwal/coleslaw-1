@@ -119,7 +119,6 @@ span.paren6:hover { color : inherit; background-color : #FFBAFF; }
 img {
     max-width: 100%;
     height: auto;
-    /*    vertical-align: middle; */
 }
 a { text-decoration: none; outline: none;}
 a.anchor { color: black }
@@ -150,7 +149,7 @@ a.anchor { color: black }
 }
 .navlink {
     display: inline-table;
-    vertical-align: bottom;
+    vertical-align: middle;
     margin: 0.25em;
 }
 .press {
