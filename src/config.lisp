@@ -25,8 +25,12 @@
   (:default-initargs
    :feeds        nil
    :license      nil
+<<<<<<< HEAD
    :conf-sitemap nil
    :plugins      nil
+=======
+   :plugins      '((rsync "-avz" "--delete" "--exclude" ".git/" "--exclude" ".gitignore" "--copy-links"))
+>>>>>>> origin/master
    :sitenav      nil
    :rsync-options "--delete -avz"
    :excerpt-sep  "<!--more-->"
