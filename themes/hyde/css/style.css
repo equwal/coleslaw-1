@@ -2,7 +2,6 @@
 * { /* Top margin was looking asymmetrical on my page, so took the nuclear option */
     margin: 0px;
     padding: 0px;
-    
 }
 /*#content { padding-top: 0.5em }*/
 #header { float: right; margin-left: 1em; margin-bottom: 1em }
@@ -33,38 +32,11 @@ body {
     font-size: 1.2em;
 }
 .relative-nav {padding: 0.75em;}
-pre { overflow: auto; margin-left: 1em; padding: 0.5em; border-left: 1px dashed;
-      background-color: inherit; padding: .75em .5em; font-family: mono-font }
-tt { font-size: .9em; font-family: mono-font}
-/* Stolen from lisppaste for the colorize output of 3bmd */
-.paste { background-color: #F4F4F4; color: black; }
-.paste:hover { background-color: #F4F4F4; color: black; }
-.symbol { color : #770055; background-color : transparent; border: 0px; margin: 0px;}
-.special { color : #FF5000; background-color : inherit; }
-.keyword { color : #770000; background-color : inherit; }
-.comment { color : #007777; background-color : inherit; }
-.string { color : #777777; background-color : inherit; }
-.atom { color : #314F4F; background-color : inherit; }
-.macro { color : #FF5000; background-color : inherit; }
-.variable { color : #36648B; background-color : inherit; }
-.function { color : #8B4789; background-color : inherit; }
-.attribute { color : #FF5000; background-color : inherit; }
-.character { color : #0055AA; background-color : inherit; }
-.syntaxerror { color : #FF0000; background-color : inherit; }.diff-deleted { color : #5F2121; background-color : inherit; }
-.diff-added { color : #215F21; background-color : inherit; }
-span.paren1 { background-color : inherit; -webkit-transition: background-color 0.2s linear; }
-span.paren1:hover { color : inherit; background-color : #BAFFFF; }
-span.paren2 { background-color : inherit; -webkit-transition: background-color 0.2s linear; }
-span.paren2:hover { color : inherit; background-color : #FFCACA; }
-span.paren3 { background-color : inherit; -webkit-transition: background-color 0.2s linear; }
-span.paren3:hover { color : inherit; background-color : #FFFFBA; }
-span.paren4 { background-color : inherit; -webkit-transition: background-color 0.2s linear; }
-span.paren4:hover { color : inherit; background-color : #CACAFF; }
-span.paren5 { background-color : inherit; -webkit-transition: background-color 0.2s linear; }
-span.paren5:hover { color : inherit; background-color : #CAFFCA; }
-span.paren6 { background-color : inherit; -webkit-transition: background-color 0.2s linear; }
-span.paren6:hover { color : inherit; background-color : #FFBAFF; }
-
+pre { overflow: auto; padding: 0.5em; border-left: 1px;
+      background-color: inherit; font-family: Hack}
+code { overflow: auto; padding: 0.5em; border-left: 1px;
+       background-color: inherit; font-family: Hack}
+tt { font-size: .9em; font-family: Hack}
 @media {
     #content {
         padding-top: 0
@@ -86,7 +58,7 @@ span.paren6:hover { color : inherit; background-color : #FFBAFF; }
 
     .article, .article-content {
         margin-left: 0;
-        text-align: justify;
+        text-align: left;
     }
     .article-content {
         margin-left: auto;
