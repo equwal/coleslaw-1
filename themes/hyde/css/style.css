@@ -28,7 +28,7 @@ html {
 .tag-medium { font-size: 1.2em; font-weight: 600 }
 .tag-high { font-size: 1.8em; font-weight: 800 }
 body {
-    font-family: Vollkorn;
+    font-family: Hack;
     font-size: 1.2em;
 }
 .relative-nav {padding: 0.75em;}
