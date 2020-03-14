@@ -19,7 +19,6 @@
     <meta http-equiv="content-type" content="text/html; charset="{$config.charset}" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="alternate" href="/rss.xml" type="application/rss+xml" />
-    <link href="/css/font.css" rel="stylesheet" type="text/css"/>
     <link href="/css/style.css" rel="stylesheet" type="text/css"/>
     {if $injections.head}
       {foreach $injection in $injections.head}
@@ -28,6 +27,7 @@
     {/if}
   </head>
 <body>
+<font size=2 face="verdana">
 <div class="navigation">
       {foreach $link in $config.sitenav}
         {if $link.relative}
@@ -75,5 +75,6 @@
 </div>
     </div>
   </body>
+  </font>
 </html>
 {/template}
