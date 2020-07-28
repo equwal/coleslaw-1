@@ -9,8 +9,6 @@
   :pathname "src/"
   :depends-on (:coleslaw-conf
                :closure-template
-               :3bmd
-               :3bmd-ext-code-blocks
                :alexandria
                :local-time
                :inferior-shell

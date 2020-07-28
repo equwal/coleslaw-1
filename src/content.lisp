@@ -113,7 +113,4 @@
   (:documentation "Render TEXT of the given FORMAT to HTML for display.")
   (:method (text (format (eql :html)))
     text)
-  (:method (text (format (eql :md)))
-    (let ((3bmd-code-blocks:*code-blocks* t))
-      (with-output-to-string (str)
-        (3bmd:parse-string-and-print-to-stream text str)))))
+  (:method (text (format (eql :md))) text))
