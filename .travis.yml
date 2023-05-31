@@ -11,6 +11,7 @@ env:
 
 install:
   - curl -L https://raw.githubusercontent.com/snmsts/roswell/release/scripts/install-for-ci.sh | sh
+  - ros install coleslaw
 
 cache:
   directories:
@@ -20,3 +21,4 @@ cache:
 script:
   - ros -s prove -e "(ql:quickload '(coleslaw coleslaw-test))"
                  -e '(or (prove:run :coleslaw-test) (uiop:quit -1))'
+  - cli-tests/basic.sh false

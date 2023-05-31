@@ -21,12 +21,13 @@
    (index-ext       :initarg :index-ext      :reader index-ext)
    (conf-sitemap    :initarg :conf-sitemap   :reader conf-sitemap)
    (rsync-options  :initarg :rsync-options :reader rsync-options))
-  
+
   (:default-initargs
    :feeds        nil
    :license      nil
    :conf-sitemap nil
    :plugins      nil
+   :plugins      '((rsync "-avz" "--delete" "--exclude" ".git/" "--exclude" ".gitignore" "--copy-links"))
    :sitenav      nil
    :rsync-options "--delete -avz"
    :excerpt-sep  "<!--more-->"
@@ -103,4 +104,3 @@ preferred over the home directory if provided."
       (setf *config* (construct 'blog config-form)
             (repo-dir *config*) repo-dir)))
   (load-plugins (plugins *config*)))
-

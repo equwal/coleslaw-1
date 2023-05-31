@@ -7,6 +7,13 @@
 * Available plugins are listed below with usage descriptions and
   config examples.
 
+## Direct deployment via rsync
+
+**Description**: This directly sends the contents of the staging dir to the deployed directory.
+The former default deployment method.
+
+**Example**: `(rsync "--exclude" ".git/" "--exclude" ".gitignore" "--copy-links")`
+
 ## Analytics via Google
 
 **Description**: Provides traffic analysis through
@@ -51,14 +58,27 @@ post with `format: cl-who` and the plugin will do the rest.
 
 **Example**: `(gfycat)`
 
-## Hosting via Github Pages
+## Deploying / Hosting via Github Pages
 
-**Description**: Allows hosting with CNAMEs via
-  [github-pages](http://pages.github.com/). Parses the host from the
-  `:domain` section of your config by default. Pass in a string to
-  override.
+**Description**:
 
-**Example**: `(gh-pages :cname t)`
+Coleslaw deploys the blog to the specified branch of the given url.
+* `url`     -- a string, git repository url that you already have a push access.
+* `branch` -- a string, the branch to publish, either `"gh-pages"` or `"master"` can be used.
+* `remote` -- a string, the remote name that we use in the deploy directory. defaulted to `"origin"`.
+* `cname`  -- a string denoting the custom domain name, or `t`. If `cname` is `t`, the value is inferred
+  from the domain name specified in the `.coleslawrc`.
+  The value is written into `CNAME` file in the repository root.
+  For details, see [github-pages](http://pages.github.com/).
+
+**Example**:
+
+``` lisp
+(gh-pages :url "git@github.com:myaccount/myrepo.git"
+          :branch "gh-pages"
+          :remote "origin"
+          :cname t)
+```
 
 ## Incremental Builds
 
@@ -101,6 +121,17 @@ post with `format: cl-who` and the plugin will do the rest.
 
 - `:config` is used as supplementary inline configuration to the
   `MathJax.Hub.Config ({ ... });`. It is unused by default.
+
+## Markless
+
+**Description**: [Markless](https://shirakumo.github.io/markless) is a
+  new document markup standard. To use it in your posts, create the
+  posts with `format: markless`. The output is generated using
+  [cl-markless-plump](https://shirakumo.github.io/cl-markless/cl-markless-plump/),
+  meaning any syntax extensions that work with it should also be
+  available in Coleslaw.
+
+**Example**: `(mess)`
 
 ## ReStructuredText
 
@@ -196,7 +227,6 @@ is optional.
 **Example**: `(git-versioning 'stage 'commit 'push)` or `(git-versioning 'stage 'commit)`
 
 ### Double Versioning
-=======
 Either [automatic git interaction](#git-versioned),
 [double versioned](#double-versioned), or [hard versioned](#hard-versioned).
 
@@ -234,7 +264,6 @@ stagedir/**
 
 **Example**: `(versioned)`
 
-<<<<<<< HEAD
 ### Hard Versioning
 
 **Description**: Makes a full backup of the server directory into a backup
