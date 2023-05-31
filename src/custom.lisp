@@ -1,5 +1,5 @@
 (in-package :coleslaw)
-(defparameter *site-folder-local* "/home/jose/truexeu/")
+(defparameter *site-folder-local* "/home/jose/equwal.com/site")
 
 (defun truex ()
   (main *site-folder-local*))
@@ -11,4 +11,3 @@
 (list el list?)))
 (defmacro lst (orderliness &rest elements)
 ``(,',orderliness ,@(mapcar (lambda (x) (pack :li x)) ',elements)))|#
-

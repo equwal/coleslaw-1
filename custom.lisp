@@ -1,2 +1,3 @@
 (in-package :coleslaw)
-(defun up (&optional (site-folder "~/lang/truexeu/")) (main site-folder))
+(defun up (&optional (site-folder "~/equwal.com/site"))
+  (main site-folder))
