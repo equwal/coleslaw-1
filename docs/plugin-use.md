@@ -19,7 +19,9 @@ The former default deployment method.
 **Description**: Provides traffic analysis through
   [Google Analytics](http://www.google.com/analytics/).
 
-**Example**: `(analytics :tracking-code "google-provided-unique-id")`
+**Example**: `(gtag :tracking-code "google-provided-unique-id")`
+
+**Note**: You can use `(analytics :tracking-code "google-provided-unique-id")` for the legacy integration with Google Analytics. 
 
 ## Analytics via Piwik
 
@@ -215,15 +217,23 @@ CL-USER> (chirp:complete-authentication "4173325")
 ## Versioning Deploys
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Either [automatic git interaction](#git-versioning),
 [double versioning](#double-versioning), or [hard versioning](#hard-versioning).
 
 ### Git Versioning
+=======
+Either [automatic git interaction](#git-versioned) or [double
+versioning](#double-versioning)
+
+### Git Versioned
+>>>>>>> master
 
 **Description**: Automatically stages, commits, and/or pushes the server's
 sources. Assumes that a git repository exists in the server's directory. Pushing
 is optional.
 
+<<<<<<< HEAD
 **Example**: `(git-versioning 'stage 'commit 'push)` or `(git-versioning 'stage 'commit)`
 
 ### Double Versioning
@@ -255,6 +265,15 @@ stagedir/**
 **Example**: `(git-versioned stage commit upload)` or `(git-versioned stage commit)`
 
 ### Double Versioned
+=======
+**Examples**: 
+`(git-versioned "~/src/dir/" 'stage 'commit 'push)`
+
+
+`(git-versioned "~/src/dir/" 'stage 'commit)`
+
+### Double Versioning
+>>>>>>> master
 
 **Description**: Originally, this was Coleslaw's only deploy behavior.
   Instead of deploying directly to `:deploy-dir`, creates `.curr` and
@@ -317,3 +336,5 @@ For example `!yt[oeul8fTG9dM|width=480,allowfullscreen]`.
   [3bmd](https://github.com/3b/3bmd/blob/master/README.md) for more info.
 
 **Example**: `(pygments)`
+
+**Setup**: Install `Pygments` and verify that the `pygmentize` command works (`pygmentize -V` should print the version number). You also need to verify that your theme includes an appropriate css file.

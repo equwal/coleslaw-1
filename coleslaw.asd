@@ -8,10 +8,8 @@
   :author "Brit Butler <redline6561@gmail.com>"
   :pathname "src/"
   :depends-on (:closure-template
-               :coleslaw-conf
-               :closure-template
-               :3bmd
-               :3bmd-ext-code-blocks
+               ;:3bmd
+               ;:3bmd-ext-code-blocks
                :alexandria
                :local-time
                :inferior-shell

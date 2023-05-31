@@ -20,8 +20,7 @@
    (title           :initarg :title          :reader title)
    (index-ext       :initarg :index-ext      :reader index-ext)
    (conf-sitemap    :initarg :conf-sitemap   :reader conf-sitemap)
-   (rsync-options  :initarg :rsync-options :reader rsync-options))
-
+   (rsync-options  :initarg :rsync-options :reader rsync-options)))
   (:default-initargs
    :feeds        nil
    :license      nil

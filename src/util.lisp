@@ -120,6 +120,12 @@ If ARGS is provided, use (fmt path args) as the value of PATH."
 use (fmt program args) as the value of PROGRAM."
   (inferior-shell:run (fmt program args) :show t))
 
+(defun run-lines (dir &rest programs)
+  "Runs some programs, in a directory."
+  (mapc (lambda (line)
+          (run-program "cd ~A && ~A" dir line))
+        programs))
+
 (defun take-up-to (n seq)
   "Take elements from SEQ until all elements or N have been taken."
   (subseq seq 0 (min (length seq) n)))
@@ -143,6 +149,7 @@ in the git repo since REVISION."
     (let ((cmd (format nil "git diff --name-status ~A HEAD" revision)))
       (mapcar #'split-on-whitespace (inferior-shell:run/lines cmd)))))
 
+<<<<<<< HEAD
 (defun rsync-installed-p (&optional (test-args "--version"))
   (block escape
     (handler-case (run-program "rsync ~A" test-args)
@@ -177,3 +184,9 @@ in the git repo since REVISION."
   (run-program "ln -sfn ~a ~a" target path))
 
 
+=======
+(defun class-name-p (name class)
+  "True if the specified string is the name of the class provided"
+  ;; This feels way too clever. I wish I could think of a better option.
+  (string-equal name (symbol-name (class-name class))))
+>>>>>>> master
