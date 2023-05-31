@@ -37,6 +37,7 @@ function that takes a DOCUMENT and returns NIL or a STRING for template insertio
         local-theme
         (app-path "themes/~a/" theme))))
 
+
 (defun compile-theme (theme)
   "Locate and compile the templates for the given THEME."
   (do-files (file (find-theme theme) "tmpl")
