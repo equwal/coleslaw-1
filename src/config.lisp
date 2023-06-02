@@ -20,18 +20,17 @@
    (title           :initarg :title          :reader title)
    (index-ext       :initarg :index-ext      :reader index-ext)
    (conf-sitemap    :initarg :conf-sitemap   :reader conf-sitemap)
-   (rsync-options  :initarg :rsync-options :reader rsync-options)))
-  (:default-initargs
+   (rsync-options  :initarg :rsync-options :reader rsync-options))
+   (:default-initargs
    :feeds        nil
    :license      nil
    :conf-sitemap nil
-   :plugins      nil
    :plugins      '((rsync "-avz" "--delete" "--exclude" ".git/" "--exclude" ".gitignore" "--copy-links"))
    :sitenav      nil
    :rsync-options "--delete -avz"
    :excerpt-sep  "<!--more-->"
    :name-fn      'identity
-   :charset      "UTF-8"
+   :charset      "utf-8"
    :lang         "en"
    :page-ext     #1="html"
    :separator    ";;;;;"

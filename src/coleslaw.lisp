@@ -48,7 +48,9 @@
 
 (defgeneric deploy (staging)
   (:documentation "Deploy the STAGING build to the directory specified in the config.")
-  (:method (staging) (path-move staging (deploy-dir *config*))))))
+  (:method (staging) (path-move staging (deploy-dir *config*))))
+
+
 
 (defun update-symlink (path target)
   "Update the symlink at PATH to point to TARGET."

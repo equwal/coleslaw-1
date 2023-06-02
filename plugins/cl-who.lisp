@@ -2,22 +2,17 @@
   (ql:quickload 'cl-who))
 
 (defpackage :coleslaw-cl-who
-  (:use #:cl #:cl-who)
-  (:import-from #:coleslaw :render-text)
+  (:use #:cl)
   (:export #:enable))
 
 (in-package :coleslaw-cl-who)
 
-(defmethod render-text (text (format (eql :cl-who)))
-  (let* ((*package* (find-package "COLESLAW-CL-WHO"))
-         (sexps (with-input-from-string (v text)
-                  (do* ((line (read v)
-                              (read v nil 'done))
-                        (acc (list line)
-                             (cons line acc)))
-                       ((eql line 'done)
-                        (nreverse (cdr acc)))))))
-    (eval `(with-html-output-to-string (v) ,@sexps))))
+(defmethod coleslaw:render-text (text (format (eql :cl-who)))
+  (with-input-from-string (s (concatenate 'string
+                                          #.(format nil "(cl-who:with-html-output-to-string ()~%")
+                                          text
+                                          #.(format nil "~%)")))
+      (read s)))
 
 (defun enable ()
   )
