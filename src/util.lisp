@@ -155,11 +155,6 @@ in the git repo since REVISION."
       (t () (return-from escape nil)))
     t))
 
-(defun run-lines (dir &rest programs)
-  "Runs some programs, in a directory."
-  (mapc (lambda (line)
-          (run-program "cd ~A && ~A" dir line))
-        programs))
 
 (defun ensure-remote-directories-exist (rsync-path)
   "Not implemented."
