@@ -329,7 +329,7 @@ h, h1, h2, h3, h4, h5, h6 {
     vertical-align: middle;
     color: white;
     font-size: 1.2em;
-    text-decoration: underline dotted #0000ff;
+    text-decoration: underline dotted white;
 }
 .right {
     text-align: right;
