@@ -8,20 +8,20 @@
 #tagsoup {clear: both; padding: 0.75em}
 #tagsoup a {padding: 0.5em}
 .tags {padding-left: 0.75em; padding-bottom: 0.75em;}
-.date { font-style: italic;  clear: both; color: black; padding-left: 0.75em} /* except index */
+.date { font-style: italic;  clear: both; color: white; padding-left: 0.75em} /* except index */
 .article-meta {
     padding-bottom: 0.75em;
     margin-bottom: 0.75em;
     max-width: 32em;
     padding-left: 2em;
     padding-right: 2em;
-    
+
 }
 .archive-title { font-size: 1em }
 html {
-    background: #0000ff;
+    background: #151515;
     margin: 2%;
-    color: black;
+    color: white;
 }
 
 .tag-low { font-size: .8em; font-weight: 200 }
@@ -30,13 +30,51 @@ html {
 body {
     font-family: Hack;
     font-size: 1.2em;
+    background: #151515;
+    color: white;
 }
 .relative-nav {padding: 0.75em;}
-pre { overflow: auto; padding: 0.5em; border-left: 1px;
-      background-color: inherit; font-family: Hack}
-code { overflow: auto; padding: 0.5em; border-left: 1px;
-       background-color: inherit; font-family: Hack}
+pre,code { overflow: auto; padding: 0.5em; border-left: 1px;
+       background-color: inherit; font-family: Hack, monospace;
+       overflow-wrap: break-word; color: lime}
+h2 { color: tomato }
 tt { font-size: .9em; font-family: Hack}
+
+@media (prefers-color-scheme: light) {
+	body {
+		background: white ;
+		color: black ;
+	}
+	a {
+		color: blue ;
+	}
+	a:visited {
+		color: purple ;
+	}
+	h2 {
+		color: inherit ;
+	}
+	pre,code {
+		color: forestgreen ;
+	}
+}
+
+
+@media print {
+	a[href] {
+		text-decoration: none ;
+		color: black ;
+	}
+}
+
+@media (min-width: 55em) {
+	#artlist { column-count: 2 ;}
+}
+
+@media (min-width: 100em) {
+	#artlist { column-count: 3 ;}
+}
+
 @media {
     #content {
         padding-top: 0
@@ -92,8 +130,11 @@ img {
     max-width: 100%;
     height: auto;
 }
-a { text-decoration: none; outline: none;}
-a.anchor { color: black }
+a { text-decoration: none; outline: none; color: lightblue;}
+
+a:visited {color: gray;}
+
+a.anchor { color: white; }
 /* .fineprint {
     background: #98fb98;
 } */
@@ -103,7 +144,7 @@ a.anchor { color: black }
     height: auto;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
-    background-color: #E5e5e5;
+    background-color: #151515;
     text-align: center;
     margin-bottom: 2%;
 }
@@ -111,12 +152,12 @@ a.anchor { color: black }
     border-width: 0.25em;
     border-style: outset;
     width: auto;
-    background-color: #E5e5e5;
+    background-color: #151515;
     height: auto;
     margin: 0;
     padding: 0.25em;
     margin-left: 0.75em;
-    color: black;
+    color: white;
     text-align: center;
 }
 .navlink {
@@ -144,7 +185,7 @@ a.anchor { color: black }
     padding: 1em;
 }
 .innerbg {
-    background: #E5e5e5;
+    background: #151515;
     padding: 0px;
     margin: 0px;
 }
@@ -174,7 +215,7 @@ h, h1, h2, h3, h4, h5, h6 {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     padding-left: 0;
-    
+
 }
 .button {
     border-width: 0.25em;
@@ -182,7 +223,7 @@ h, h1, h2, h3, h4, h5, h6 {
     width: 4em;
     margin-top: 0.25em;
     margin-bottom: 0.25em;
-    color: black;
+    color: white;
     text-align: center;
 }
 .sitemap {
@@ -286,7 +327,7 @@ h, h1, h2, h3, h4, h5, h6 {
 }
 .article {
     vertical-align: middle;
-    color: black;
+    color: white;
     font-size: 1.2em;
     text-decoration: underline dotted #0000ff;
 }
