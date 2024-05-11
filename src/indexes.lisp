@@ -2,8 +2,11 @@
 
 (defvar *all-months* nil
   "The list of months in which content was authored.")
+
 (defvar *all-tags* nil
   "The list of tags which content has been tagged with.")
+
+(defvar *magic-number-of-posts-per-page* 100)
 
 (defclass index ()
   ((url     :initarg :url     :reader page-url)
@@ -68,14 +71,14 @@
 
 (defmethod discover ((doc-type (eql (find-class 'numeric-index))))
   (let ((content (by-date (find-all 'post))))
-    (dotimes (i (ceiling (length content) 10))
+    (dotimes (i (ceiling (length content) *magic-number-of-posts-per-page*))
       (add-document (index-by-n i content)))))
 
 (defun index-by-n (i content)
   "Return the index for the Ith page of CONTENT in reverse chronological order."
-  (let ((content (subseq content (* 10 i))))
+  (let ((content (subseq content (* *magic-number-of-posts-per-page* i))))
     (make-instance 'numeric-index :slug (1+ i) :name (1+ i)
-                   :content (take-up-to 10 content)
+                   :content (take-up-to *magic-number-of-posts-per-page* content)
                    :title "Recent Content")))
 
 (defmethod publish ((doc-type (eql (find-class 'numeric-index))))
