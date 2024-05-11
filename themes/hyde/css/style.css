@@ -77,7 +77,8 @@ tt { font-size: .9em; font-family: Hack}
 
 @media {
     #content {
-        padding-top: 0
+        padding-top: 0;
+        max-width: 50em;
     }
 
     .title {
@@ -127,9 +128,11 @@ tt { font-size: .9em; font-family: Hack}
     padding: 3em;
 }
 img {
-    max-width: 100%;
+    max-width: 32em;
     height: auto;
+    padding-bottom: 20px;
 }
+
 a { text-decoration: none; outline: none; color: lightblue;}
 
 a:visited {color: gray;}
@@ -200,10 +203,12 @@ ul, ol {
 }
 
 .article-content {
-    max-width: 32em;
+    max-width: 80%;
     padding-left: 2em;
     padding-right: 2em;
 }
+
+.article-content p { margin-bottom: 20px;}
 .title {
     width: auto;
     text-align: center;
@@ -283,6 +288,7 @@ h, h1, h2, h3, h4, h5, h6 {
     padding-right: 1em;
     width: 70%;
 }
+
 .jump {
     padding-top: 200px; margin-top: -200px;
 }

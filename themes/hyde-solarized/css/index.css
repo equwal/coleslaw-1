@@ -1,0 +1,36 @@
+body {
+    padding-top: 0;
+}
+/* .navigation {
+    font-size: 1.2em;
+    height: 20%;
+    background-color: #E5e5e5;
+}*/
+.article-image img {
+    max-height: 25%;
+}
+/* .navlink {
+    border-width: 0.25em;
+    border-style: outset;
+    max-height: 10%;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-bottom: 0.25em;
+    margin-top: 0.25em;
+    color: black;
+    text-align: center;
+    clear: left;
+    max-width: 9%;
+    display: inline-table
+}
+.navlink img {
+    margin: 0;
+    display: inline;
+    width: 12em;
+}
+.navlink a {
+    width: 9%;
+}*/
+.date{clear:none}
+
+

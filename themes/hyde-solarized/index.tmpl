@@ -1,0 +1,54 @@
+{namespace coleslaw.theme.hyde-solarized}
+{template index}
+<link href="/css/index.css" rel="stylesheet" type="text/css"/>
+<link href="/css/font.css" rel="stylesheet" type="text/css"/>
+<title>{$config.title}</title>
+<meta name="description" content="polyglot gigachad hackerman website">
+<meta property="og:image" content="/static/stalkercampfire.webp">
+
+<div class="article-meta-meta">
+
+  <span id="relative-nav" style="display:flex;">
+      <span class=fishdown>{if $prev}
+        <a href="{$config.domain}/{$prev.url}">
+        <img src="/static/fishdown.png" alt="fighdown" />
+      </a>
+    {/if}
+    </span>
+  <div class=centercomp>
+    {foreach $obj in $index.content}
+    <div class="article-meta" style="flex:1;">
+      <strong>This website uses an efficient fish-based (based fish) navigation technique.</strong>
+    <a href="{$config.domain}/{$obj.url}">
+        <div class="article-box">
+          {if $obj.image}
+          <div class="article-image"> <img src="{$obj.image}" alt="Article image."></div>
+          {/if}
+          <div class="article-title" href="{$config.domain}/{$obj.url}"><h1>{$obj.title}</h1></div>
+          <div class="article">{$obj.excerpt |noAutoescape}</div>
+         </div>
+         <div />
+      </div>
+        </a>
+    </div>
+    {/foreach}
+  </div>
+  <span class=fishup>{if $next}
+    <a href="{$config.domain}/{$next.url}">
+      <img src=/static/fishup.png align=right alt="fisho up" />
+    </a>
+    {/if}
+    </span>
+  </span>
+</div>
+
+  
+{if $tags}
+<div id="tagsoup">
+  <p>View by type: 
+    {foreach $tag in $tags}
+      <a href="{$config.domain}/{$tag.url}">{$tag.name}</a>{nil}
+    {/foreach}
+</div>
+{/if}
+{/template}

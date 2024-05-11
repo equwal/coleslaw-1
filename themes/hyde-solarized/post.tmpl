@@ -1,0 +1,43 @@
+{namespace coleslaw.theme.hyde-solarized}
+
+{template post}
+<title>{$post.title}</title>
+<meta property="og:image" content="{$post.image}">
+<meta property=description content="{$post.title}">
+<div class="article-content">{\n}
+<meta property="title" content="polyglot gigachad hackerman website. Chad essay: {$post.title}">
+<span id="relative-nav" style="display:flex;">
+  <span class=fishdown>{if $prev}
+     <a href="{$config.domain}/{$prev.url}">
+     <img src=/static/fishdown.png align=left alt="fisho down" />
+     </a>
+  {/if}
+  </span> <!-- fishdown -->
+
+  <span class=centercomp style="flex:1;">
+    <strong>This website uses an efficient fish-based (based fish) navigation technique.</strong>
+    <h1 class=title>{$post.title}</h1>
+    {$post.text |noAutoescape}
+  </span>{\n}
+
+    <span class=fishup>{if $next}
+    <a href="{$config.domain}/{$next.url}">
+      <img src=/static/fishup.png align=right alt="fisho up" />
+    </a>
+    {/if}
+    </span>
+ </span> 
+
+  <div class="date">{\n}
+    </div>{\n}
+    {\n}
+  <div class="tags">{\n}
+      {if $post.tags}
+        in: {foreach $tag in $post.tags}
+          <a href="{$config.domain}/{$tag.url}">{$tag.name}</a>{nil}
+            {if not isLast($tag)},{sp}{/if}
+        {/foreach}
+      {/if}
+    </div>
+
+{/template}
