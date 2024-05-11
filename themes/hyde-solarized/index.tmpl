@@ -8,7 +8,7 @@
 
 <div class="article-meta-meta">
 
-  <span id="relative-nav" style="display:flex;">
+  <span class="relative-nav">
       <span class=fishdown>{if $prev}
         <a href="{$config.domain}/{$prev.url}">
         <img src="/static/fishdown.png" alt="fighdown" />
@@ -17,7 +17,7 @@
     </span>
   <div class=centercomp>
     {foreach $obj in $index.content}
-    <div class="article-meta" style="flex:1;">
+    <div class="article-meta">
       <strong>This website uses an efficient fish-based (based fish) navigation technique.</strong>
     <a href="{$config.domain}/{$obj.url}">
         <div class="article-box">

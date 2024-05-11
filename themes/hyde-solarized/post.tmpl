@@ -6,7 +6,7 @@
 <meta property=description content="{$post.title}">
 <div class="article-content">{\n}
 <meta property="title" content="polyglot gigachad hackerman website. Chad essay: {$post.title}">
-<span id="relative-nav" style="display:flex;">
+<span class="relative-nav">
   <span class=fishdown>{if $prev}
      <a href="{$config.domain}/{$prev.url}">
      <img src=/static/fishdown.png align=left alt="fisho down" />
@@ -14,7 +14,7 @@
   {/if}
   </span> <!-- fishdown -->
 
-  <span class=centercomp style="flex:1;">
+  <span class=centercomp>
     <strong>This website uses an efficient fish-based (based fish) navigation technique.</strong>
     <h1 class=title>{$post.title}</h1>
     {$post.text |noAutoescape}

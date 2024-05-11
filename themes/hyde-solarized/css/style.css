@@ -10,8 +10,20 @@
   margin-right: auto;
   /*width: 95%;*/
 }
-.fishup,.fishdown {
-  padding: 10px;
+.fishup {
+  padding-left: 30px;
+  /*flex: auto;*/
+}
+.fishdown {
+  padding-right: 30px;
+  /*flex: auto;*/
+}
+
+.centercomp {
+  width: 435px;
+}
+.centercomp img {
+	width: 435px;
 }
 /*#content { padding-top: 0.5em }*/
 #header { float: right; margin-left: 1em; margin-bottom: 1em }
@@ -44,7 +56,12 @@ body {
 		color: black ;
 
 }
-.relative-nav {padding: 0.75em;}
+.relative-nav {
+  padding: 0.75em;
+  display:flex;
+  justify-content:space-around;
+}
+
 pre,code { overflow: auto; border-left: 1px;
        background-color: inherit; font-family: Hack, monospace;
        overflow-wrap: break-word; color: lime}
@@ -86,7 +103,7 @@ pre,code {
 @media {
     #content {
         padding-top: 0;
-        max-width: 50em;
+        width: 100%;
     }
 
     .title {
@@ -212,15 +229,15 @@ a.anchor { color: white; }
 
 /* Continued in other CSS files that come after */
 ul, ol {
-    float: none;
+    /*float: none;
     clear: right;
-    display: table;
-    margin: 1em;
-    margin-left: 2em;
+    display: table;*/
+    /*margin: 1em;
+    margin-left: 2em;*/
 }
 
 .article-content {
-    max-width: 80%;
+    max-width: 95%;
     padding-left: 2em;
     padding-right: 2em;
 }
